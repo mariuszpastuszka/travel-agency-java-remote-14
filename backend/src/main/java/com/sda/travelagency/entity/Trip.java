@@ -35,7 +35,7 @@ public class Trip {
     @Enumerated(EnumType.STRING)
     TransportType typeOfTransport;
 
-    @Transient
+    @OneToOne
     SecurityRules securityRules;
 
     @Enumerated(EnumType.STRING)
