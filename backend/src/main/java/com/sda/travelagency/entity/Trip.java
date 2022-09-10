@@ -47,6 +47,6 @@ public class Trip {
     @Transient
     HotelFacilities hotelFacilities;
 
-    @Transient
+    @ElementCollection
     List<String> photos;
 }
