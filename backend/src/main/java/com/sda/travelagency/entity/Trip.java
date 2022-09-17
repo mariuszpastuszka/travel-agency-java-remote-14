@@ -47,7 +47,7 @@ public class Trip {
     HotelFacilities hotelFacilities;
 
     @ElementCollection
-    @CollectionTable(name = "PHOTOS")
+    @CollectionTable(name = "PHOTOS", joinColumns = @JoinColumn(name = "ID_OF_TRIP"))
     @Column(name = "photo")
     List<String> photos;
 }
