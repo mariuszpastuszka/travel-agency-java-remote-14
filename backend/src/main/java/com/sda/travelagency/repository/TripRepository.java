@@ -50,7 +50,7 @@ public class TripRepository implements CrudRepository<Trip, Long> {
                         .securityRules(new SecurityRules(1L, "", ""))
                         .paymentType(PaymentType.PAYPAL)
                         .mealType(MealType.ALL_INCLUSIVE)
-                        .hotelFacilities(new HotelFacilities(List.of(), List.of("bathroom", "bed")))
+                        .hotelFacilities(new HotelFacilities(1L, List.of(), List.of("bathroom", "bed")))
                         .photos(List.of("https://fastly.4sqi.net/img/general/600x600/1376806605_Hc3gxR3iMMI5OKRpt7ook-zGGreT4XxgEapWx0wC844.jpg"))
                         .build(),
                 Trip.builder()
@@ -62,7 +62,7 @@ public class TripRepository implements CrudRepository<Trip, Long> {
                         .securityRules(new SecurityRules(2L, "", ""))
                         .paymentType(PaymentType.CARD)
                         .mealType(MealType.ALL_INCLUSIVE)
-                        .hotelFacilities(new HotelFacilities(List.of(), List.of("Bed", "Swiming Pool", "Bathroom", "Parking")))
+                        .hotelFacilities(new HotelFacilities(2L, List.of(), List.of("Bed", "Swiming Pool", "Bathroom", "Parking")))
                         .photos(List.of("https://pix10.agoda.net/hotelImages/6796247/0/33adac49e47c732b38c54faca72b84f9.jpg?ca=22&ce=0&s=1024x768"))
                         .build());
     }
