@@ -48,5 +48,7 @@ public class Trip {
     HotelFacilities hotelFacilities;
 
     @ElementCollection
+    @CollectionTable(name = "PHOTOS")
+    @Column(name = "photo")
     List<String> photos;
 }
