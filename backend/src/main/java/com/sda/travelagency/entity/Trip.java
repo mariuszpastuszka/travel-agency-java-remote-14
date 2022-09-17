@@ -25,8 +25,7 @@ public class Trip {
 
     LocalDate tripEndDate;
 
-    // dirty fix - just ignore that field
-    @Transient
+    @OneToOne
     Destination destination;
 
     @Embedded
