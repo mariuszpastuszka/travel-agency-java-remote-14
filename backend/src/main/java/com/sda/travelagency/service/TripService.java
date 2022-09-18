@@ -44,7 +44,7 @@ public class TripService {
         // +log data
         // +store into datasource
         // validate fields of newTrip
-        // validate duplicates
+        // +validate duplicates
         if (tripRepository.isDuplicateOfOther(newTrip)) {
             throw new TripAlreadyExistsException("Trip already exists!!!");
         }

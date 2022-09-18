@@ -41,4 +41,17 @@ public class TripController {
         var entity = tripService.findTripById(id);
         return tripConverter.fromEntityToDto(entity);
     }
+
+    @PostMapping
+    public TripDto createNewTrip(@RequestBody TripDto newTrip) {
+        log.info("trying to create new trip: [{}]", newTrip);
+        // convert dto to entity
+        var toSaveEntity = tripConverter.fromDtoToEntity(newTrip);
+
+        // store into db
+        var saved = tripService.createNewTrip(toSaveEntity);
+
+        // convert back to dto
+        return tripConverter.fromEntityToDto(saved);
+    }
 }
