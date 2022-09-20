@@ -1,5 +1,6 @@
 .header {
   text-align: center;
   background-image: url("src/assets/images/home-picture.png");
-  max-height: 50px;
+  height: 150px;
+  margin-bottom: 20px;
 }
