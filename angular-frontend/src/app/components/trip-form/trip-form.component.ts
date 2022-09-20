@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {TripService} from "../../services/trip-service/trip-service.service";
 import {FormControl, FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
-import {allTripsUrl} from "../../models/urls";
+import {tripsUrl} from "../../models/urls";
 import {TripDto} from "../../models/trips";
 
 @Component({
@@ -62,7 +62,7 @@ export class TripFormComponent implements OnInit {
     console.log("sending data: " + JSON.stringify(trip))
     this.tripService.createNewTrip(trip)
       .subscribe(
-        () => this.router.navigate([allTripsUrl])
+        () => this.router.navigate([tripsUrl])
       )
   }
 
